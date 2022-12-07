@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #FFFEFD;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Index CSS*/
+.welcome {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    
+    /* justify-content: center; */
+    align-items: center;
+
+    background-image: url(/images/image1.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.welcome .logo {
+    position: absolute;
+    margin-top: 100px;
+}
+.welcome .logo img {
+    width: 150px;
+    opacity: 80%;
+}
+.welcome .welcome-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.welcome .welcome-body .navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 300px;
+    
+    justify-content: center;
+    align-items: center;
+}
+.welcome .welcome-body .navigation .text h1 {
+    color: #ffff;
+    opacity: 80%;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 0.4em;
+}
+.welcome .welcome-body .navigation .text p {
+    padding-left: 16px;
+
+    color: #ffff;
+    opacity: 80%;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+.welcome a {
+    width: 150px;
+    margin-top: 300px;
+
+    border: 2px solid #ffff;
+    background-color: transparent;
+
+    color: #ffff;
+    opacity: 80%;
+    font-size: 1.5vw;
+    text-align: center;
+    text-decoration: none;
+}
+.welcome a:hover {
+    background-color: #ffff;
+    opacity: 100%;
+    color: black;
+}
+.welcome a p {
+    margin-top: 20px;
+    
+    font-size: 20px;
+    letter-spacing: 0.5rem;
+    font-weight: 900;
+}
+
+/* Navigation CSS */
+.nav-bar .logo {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.nav-bar .pages {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.nav-bar a {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: inline-block; 
+
+    color: #b2b2b2;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    letter-spacing: 0.5rem;
+}
+.nav-bar a:hover {
+    color: #4c4c4c;
+}
+.nav-bar a.active {
+    color: #000000;
+}
+.nav-bar a img {
+    width: 10%;
+    object-fit: cover;
+}
+
+/* Home CSS */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+    text-align: center;
+}
+.home-content .image img {
+    width: 85%;
+}
+.home-content .info #location{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+}
+
+/* Gallery CSS */
+.gallery {
+    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 800px 800px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+}
+.gallery-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gallery-item .image {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.gallery-item .image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: .5s ease-in-out;
+}
+.gallery-item:hover .image img {
+    transform: scale(1.3);
+}
+
+.w-1 {
+    grid-column: span 1;
+}
+.w-2 {
+    grid-column: span 2;
+}
+.w-3 {
+    grid-column: span 3;
+}
+.w-4 {
+    grid-column: span 4;
+}
+.w-5 {
+    grid-column: span 5;
+}
+.w-6 {
+    grid-column: span 6;
+}
+
+.h-1 {
+    grid-row: span 1;
+}
+.h-2 {
+    grid-row: span 2;
+}
+.h-3 {
+    grid-row: span 3;
+}
+.h-4 {
+    grid-row: span 4;
+}
+.h-5 {
+    grid-row: span 5;
+}
+.h-6 {
+    grid-row: span 6;
+}
+
+/* Contact CSS */
+.contact-content {
+    display: flex;
+    padding: 16px;
+}
+.contact-content .image {
+    padding: 20px;
+    float: left;
+    width: 60%;
+}
+.contact-content img {
+    width: 100%
+}
+.contact-content .message {
+    padding: 20px;
+    float: right;
+    width: 40%;
+}
+.contact-content .message h3 {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+}
+.contact-content .message input {
+    opacity: 50%;
+    height: 30px;
+    width: 250px;
+}
+.contact-content .message textarea {
+    opacity: 50%;
+}
+
+@media screen and (max-width: 500px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .w-1 .w-2 .w-3 .w-4 .w-5 .w-6 {
+        grid-column: span 3;
+    }
+}
